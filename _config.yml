@@ -15,8 +15,8 @@
 # in the templates via {{ site.myvariable }}.
 title: 講義資料テンプレート
 description: 講義資料のテンプレート
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://just-the-docs.com" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/lecture_template/ " # the subpath of your site, e.g. /blog
+url: "https://nobutakashimizu.github.io/lecture_template/" # the base hostname & protocol for your site, e.g. http://example.com
 repository: just-the-docs/just-the-docs # for github-metadata
 
 permalink: pretty
@@ -143,7 +143,7 @@ liquid:
 back_to_top: true
 back_to_top_text: "Back to top"
 
-footer_content: 'Copyright &copy; 2024 Nobutaka Shimizu. Distributed by an <a href="https://github.com/just-the-docs/just-the-docs/tree/main/LICENSE.txt">MIT license.</a> <a href="https://docs.github.com/ja/pages/getting-started-with-github-pages/about-github-pages">This site is powered by Github Pages.</a>'
+footer_content: 'Copyright &copy; 2024 Nobutaka Shimizu. <a href="https://docs.github.com/ja/pages/getting-started-with-github-pages/about-github-pages">This site is powered by Github Pages.</a>'
 
 # Footer last edited timestamp
 last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
