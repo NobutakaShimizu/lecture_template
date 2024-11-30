@@ -3,7 +3,7 @@ title: ホーム
 layout: home
 nav_order: 1
 description: "講義トップ"
-permalink: /
+permalink: 
 ---
 
 講義資料用のテンプレートです.
