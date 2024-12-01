@@ -17,7 +17,7 @@ title: 講義資料テンプレート
 description: 講義資料のテンプレート
 baseurl: "/lecture_template" # the subpath of your site, e.g. /blog
 url: "https://nobutakashimizu.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-repository: just-the-docs/just-the-docs # for github-metadata
+repository: lecture_template # for github-metadata
 
 permalink: pretty
 

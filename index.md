@@ -9,6 +9,35 @@ description: "講義トップ"
 テンプレートの大元は[just-the-docs](https://github.com/just-the-docs/just-the-docs)です.
 マークダウンで資料を記述できます. また数式はmathjaxで書けます.
 
+# ローカルプレビューの方法
+
+Jekyllをインストールし, ターミナルでフォルダに移動し
+```console
+  bundle install
+  bundle exec jekyll serve --baseurl "" --force_polling
+```
+bundle installは最初の一回だけでよい.
+
+## 手元で動かすのに必要なもの
+- Ruby
+- RubyGems
+  - bundle を `gem install bundler` でインストール
+
+# マークダウンファイルの場所
+
+- この文章は/index.mdに記述されており, トップページはこれを編集してください.
+- 講義資料は基本的に /doc/ に記述していきます. /doc/にフォルダを作成し, 各回ごとに整理することもできます.
+  - 例えば /doc/第1回/講義1.md という構成になります. また, /doc/第1回/にindex.mdというファイルを作成しておくことによって, 各回ごとのトップページを作成することができます.
+- サイトの様々な設定は/_config.ymlを編集してください. 例えば以下の要素を変更できます.
+  - ページタイトル
+  - 右上の「製作者: 清水 伸高」
+  - 最下部の「Copyright © 2024 Nobutaka Shimizu. This site is powered by Github Pages.」
+- baseurlの内容はリポジトリ名, urlの内容はhttps://GitHubのアカウント名.github.io にしないとGitHub Pagesに公開できません.
+  ```yml
+    baseurl: "/lecture_template" # /リポジトリ名
+    url: "https://nobutakashimizu.github.io" # https://アカウント名.github.io
+  ``` 
+
 # 数式の記述
 例えば
 ```markdown
