@@ -35,9 +35,9 @@ description: "講義トップ"
 Jekyllをインストールし, ターミナルでフォルダに移動し
 ```console
   bundle install
-  bundle exec jekyll serve --baseurl "" --force_polling
+  bundle exec jekyll serve --baseurl "" --livereload
 ```
-これによって, http://127.0.0.1:4000/ をブラウザで開くと書いたものをプレビューすることができます. ファイルを編集し保存した後にブラウザを更新すると反映されているはずです.
+これによって, http://127.0.0.1:4000/ をブラウザで開くと書いたものをプレビューすることができます. ファイルを編集し保存するとブラウザ上の表示も自動的に更新されるはずです (自動更新をオフにしたい場合はオプション `--livereload` を消してください).
 
 PCにあれこれインストールしたくない場合はdockerコンテナを使う方法もあります (dockerはインストールする必要あり).
 
