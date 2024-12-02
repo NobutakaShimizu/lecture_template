@@ -9,19 +9,38 @@ description: "講義トップ"
 テンプレートの大元は[just-the-docs](https://github.com/just-the-docs/just-the-docs)です.
 マークダウンで資料を記述できます. また数式はmathjaxで書けます.
 
+# 全体の大まかな流れ
+
+マークダウンで書かれたページのファイルをjekyllと呼ばれるソフトでコンパイルのような作業(htmlファイルやcssなどの生成)を行い, 出来上がったファイルを/_site/に保存します.
+- GitHub Pagesに公開する場合はmainブランチにプッシュすると自動的にこのコンパイル作業を行い, 出来上がったものをwebページとして表示することができます. これにより手元ではマークダウンを編集するだけでwebページを書いていくことができるようになります.
+- ローカル環境でwebページをプレビューしながら執筆する場合はrubyなどが必要になります. そのための手順は以下に記しておきます (macを想定).
+  - マークダウンの執筆自体はVS Codeに適当な拡張機能をインストールするだけで良いのでかなり手軽にできます.
+
 # ローカルプレビューの方法
+
+## 手元で動かすのに必要なもの
+- Ruby
+  - rbenvでRubyのバージョン管理をするのが楽 (Pythonでいうところのpyenvみたいなもの).
+  - rbenvは, homebrewであれば `brew install rbenv` でインストールできます.
+  - rbenvを使ってRubyのバージョンを新しくしたい場合と手順を以下に記します.
+    1. `rbenv install -l` でインストールできるバージョンの一覧を取得して
+    2. `rbenv install バージョン番号` でインストールして
+    3. `rbenv global バージョン番号` でインストールしたバージョンをデフォルトに設定
+    4.  ~/.bash_profileに `eval "$(rbenv init -)"` を追記し, ターミナルで `source ~/.bash_profile` を実行.
+    5.  `ruby -v` でRubyがちゃんと指定したバージョンになっているかを確認
+- RubyGems
+  - bundle を `gem install bundler` でインストール
+  - bundleのバージョンは `gem install bundler` でアップグレードできます.
 
 Jekyllをインストールし, ターミナルでフォルダに移動し
 ```console
   bundle install
   bundle exec jekyll serve --baseurl "" --force_polling
 ```
-bundle installは最初の一回だけでよい.
+これによって, http://127.0.0.1:4000/ をブラウザで開くと書いたものをプレビューすることができます. ファイルを編集し保存した後にブラウザを更新すると反映されているはずです.
 
-## 手元で動かすのに必要なもの
-- Ruby
-- RubyGems
-  - bundle を `gem install bundler` でインストール
+PCにあれこれインストールしたくない場合はdockerコンテナを使う方法もあります (dockerはインストールする必要あり).
+
 
 # マークダウンファイルの場所
 
