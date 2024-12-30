@@ -1,21 +1,21 @@
 {"0": {
     "doc": "ホーム",
     "title": "全体の大まかな流れ",
-    "content": "マークダウンで書かれたページのファイルをjekyllと呼ばれるソフトでコンパイルのような作業(htmlファイルやcssなどの生成)を行い, 出来上がったファイルを/_site/に保存します. | GitHub Pagesに公開する場合はmainブランチにプッシュすると自動的にこのコンパイル作業を行い, 出来上がったものをwebページとして表示することができます. これにより手元ではマークダウンを編集するだけでwebページを書いていくことができるようになります. | ローカル環境でwebページをプレビューしながら執筆する場合はrubyなどが必要になります. そのための手順は以下に記しておきます (macを想定). | マークダウンの執筆自体はVS Codeに適当な拡張機能をインストールするだけで良いのでかなり手軽にできます. | . | . ",
+    "content": "マークダウンで書かれたページのファイルをローカルの環境でjekyllと呼ばれるソフトでコンパイルのような作業(htmlファイルやcssなどの生成)を行った後にリポジトリにプッシュすると反映されます. | jekyllを使うためにはrubyの環境構築が必要になります. そのための手順は以下に記しておきます (macを想定). | 注. Github Actionに対応していません (後日対応予定). | GitHub Pagesに公開する場合は, Setting/General/Pagesに移動して以下の設定にしてください: | . ",
     "url": "/lecture_template/#%E5%85%A8%E4%BD%93%E3%81%AE%E5%A4%A7%E3%81%BE%E3%81%8B%E3%81%AA%E6%B5%81%E3%82%8C",
     
     "relUrl": "/#全体の大まかな流れ"
   },"1": {
     "doc": "ホーム",
-    "title": "ローカルプレビューの方法",
+    "title": "ローカルの環境設定方法",
     "content": " ",
-    "url": "/lecture_template/#%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB%E3%83%97%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC%E3%81%AE%E6%96%B9%E6%B3%95",
+    "url": "/lecture_template/#%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB%E3%81%AE%E7%92%B0%E5%A2%83%E8%A8%AD%E5%AE%9A%E6%96%B9%E6%B3%95",
     
-    "relUrl": "/#ローカルプレビューの方法"
+    "relUrl": "/#ローカルの環境設定方法"
   },"2": {
     "doc": "ホーム",
     "title": "手元で動かすのに必要なもの",
-    "content": ". | Ruby . | rbenvでRubyのバージョン管理をするのが楽 (Pythonでいうところのpyenvみたいなもの). | rbenvは, homebrewであれば brew install rbenv でインストールできます. | rbenvを使ってRubyのバージョンを新しくしたい場合と手順を以下に記します. | rbenv install -l でインストールできるバージョンの一覧を取得して | rbenv install バージョン番号 でインストールして | rbenv global バージョン番号 でインストールしたバージョンをデフォルトに設定 | ~/.bash_profileに eval \"$(rbenv init -)\" を追記し, ターミナルで source ~/.bash_profile を実行. | ruby -v でRubyがちゃんと指定したバージョンになっているかを確認 | . | . | RubyGems . | bundle を gem install bundler でインストール | bundleのバージョンは gem install bundler でアップグレードできます. | . | . Jekyllをインストールし, ターミナルでフォルダに移動し . bundle install bundle exec jekyll serve --baseurl \"\" --livereload . これによって, http://127.0.0.1:4000/ をブラウザで開くと書いたものをプレビューすることができます. ファイルを編集し保存するとブラウザ上の表示も自動的に更新されるはずです (自動更新をオフにしたい場合はオプション --livereload を消してください). PCにあれこれインストールしたくない場合はdockerコンテナを使う方法もあります (dockerはインストールする必要あり). ",
+    "content": ". | Ruby . | rbenvでRubyのバージョン管理をするのが楽 (Pythonでいうところのpyenvみたいなもの). | rbenvは, homebrewであれば brew install rbenv でインストールできます. | rbenvを使ってRubyのバージョンを新しくしたい場合と手順を以下に記します. | rbenv install -l でインストールできるバージョンの一覧を取得して | rbenv install バージョン番号 でインストールして | rbenv global バージョン番号 でインストールしたバージョンをデフォルトに設定 | ~/.bash_profileに eval \"$(rbenv init -)\" を追記し, ターミナルで source ~/.bash_profile を実行. | ruby -v でRubyがちゃんと指定したバージョンになっているかを確認 | . | . | RubyGems . | bundle を gem install bundler でインストール | bundleのバージョンは gem install bundler でアップグレードできます. | . | . Jekyllをインストールし, ターミナルでフォルダに移動し . bundle install bundle exec jekyll serve --livereload . これによって, http://127.0.0.1:4000/ をブラウザで開くと書いたものをプレビューすることができます. ファイルを編集し保存するとブラウザ上の表示も自動的に更新されるはずです (自動更新をオフにしたい場合はオプション --livereload を消してください). PCにあれこれインストールしたくない場合はdockerコンテナを使う方法もあります (dockerはインストールする必要あり). ",
     "url": "/lecture_template/#%E6%89%8B%E5%85%83%E3%81%A7%E5%8B%95%E3%81%8B%E3%81%99%E3%81%AE%E3%81%AB%E5%BF%85%E8%A6%81%E3%81%AA%E3%82%82%E3%81%AE",
     
     "relUrl": "/#手元で動かすのに必要なもの"
