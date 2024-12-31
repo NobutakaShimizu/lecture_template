@@ -7,12 +7,12 @@ layout: table_wrappers
 <script>
   window.MathJax = {
     loader: {
-      load: ['[tex]/physics']
+      load: ['[tex]/physics', '[tex]/mathtools']
     },
     tex: { 
       inlineMath: [['$', '$'], ['\\(', '\\)']],
       tags: 'ams',
-      packages: {'[+]': ['physics']}
+      packages: {'[+]': ['physics','mathtools']}
     } 
   };
   

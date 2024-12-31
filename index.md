@@ -142,17 +142,76 @@ $$
 
 ## newcommandをまとめて記述しておく
 
-_includes/header_custom.html に記述しておくと記事のマークダウンファイルから参照することができます. 例えばこのリポジトリでは$\polylog$というコマンドを用意しています.
+_includes/header_custom.html に記述しておくと記事のマークダウンファイルから参照することができます. このリポジトリには私がよく使う以下のコマンドが書いてあります:
+
+<details markdown="1" style="background-color: #eee;">
+<summary style="display: list-item">newcommandの中身</summary>
+
+  ```
+  \newcommand{polylog}{\mathrm{polylog}}
+  \DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
+  \DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+  \DeclareMathOperator*{\E}{\mathbb{E}}
+  \DeclareMathOperator*{\Var}{\mathbf{Var}}
+  \newcommand{\indicator}{\mathbf{1}}
+  \newcommand{\e}{\mathrm{e}}
+  \newcommand{\Nat}{\mathbb{N}}
+  \newcommand{\Real}{\mathbb{R}}
+  \newcommand{\Int}{\mathbb{Z}}
+  \newcommand{\Comp}{\mathbb{C}}
+  \newcommand{\binset}{\{0,1\}}  
+  \DeclareMathOperator*{\argmin}{argmin}
+  \DeclareMathOperator*{\argmax}{argmax}  
+  \newcommand{\F}{\mathbb{F}}
+  \newcommand{\Fp}{\mathbb{F}_p}
+  \newcommand{\Ber}{\mathrm{Ber}}
+  \newcommand{\supp}{\mathsf{sup}}
+  \newcommand{\dist}{\mathrm{dist}}
+
+  \newcommand{\calA}{\mathcal{A}}
+  \newcommand{\calB}{\mathcal{B}}
+  \newcommand{\calC}{\mathcal{C}}
+  \newcommand{\calD}{\mathcal{D}}
+  \newcommand{\calE}{\mathcal{E}}
+  \newcommand{\calF}{\mathcal{F}}
+  \newcommand{\calG}{\mathcal{G}}
+  \newcommand{\calH}{\mathcal{H}}
+  \newcommand{\calI}{\mathcal{I}}
+  \newcommand{\calJ}{\mathcal{J}}
+  \newcommand{\calK}{\mathcal{K}}
+  \newcommand{\calL}{\mathcal{L}}
+  \newcommand{\calM}{\mathcal{M}}
+  \newcommand{\calN}{\mathcal{N}}
+  \newcommand{\calO}{\mathcal{O}}
+  \newcommand{\calP}{\mathcal{P}}
+  \newcommand{\calQ}{\mathcal{Q}}
+  \newcommand{\calR}{\mathcal{R}}
+  \newcommand{\calS}{\mathcal{S}}
+  \newcommand{\calT}{\mathcal{T}}
+  \newcommand{\calU}{\mathcal{U}}
+  \newcommand{\calV}{\mathcal{V}}
+  \newcommand{\calW}{\mathcal{W}}
+  \newcommand{\calX}{\mathcal{X}}
+  \newcommand{\calY}{\mathcal{Y}}
+  \newcommand{\calZ}{\mathcal{Z}}
+  ```
+
+</details>
+
+
+
 
 ## パッケージのインポート
 Mathjax v3の[extension](https://docs.mathjax.org/en/latest/input/tex/extensions/index.html)が使えます.
 カスタムする場合は _layouts/default.html
 の以下の画像のあたりを適切に編集してください.
+
 例えば
 ```
 $$
   \begin{align*}
-    \qty(\frac{1}{2})
+    \E[X]　&= \qty(\frac{1}{2}) \\
+    \Var[Y] &= \floor*{\frac{2}{3}}
   \end{align*}
 $$
 ```
@@ -160,7 +219,8 @@ $$
 
 $$
   \begin{align*}
-    \qty(\frac{1}{2})
+    \E[X]　&= \qty(\frac{1}{2}) \\
+    \Var[Y] &= \floor*{\frac{2}{3}}
   \end{align*}
 $$
 
