@@ -140,9 +140,31 @@ $$
 
 が出力されます.
 
-### **newcommandをまとめて記述しておく**
+## newcommandをまとめて記述しておく
 
 _includes/header_custom.html に記述しておくと記事のマークダウンファイルから参照することができます. 例えばこのリポジトリでは$\polylog$というコマンドを用意しています.
+
+## パッケージのインポート
+Mathjax v3の[extension](https://docs.mathjax.org/en/latest/input/tex/extensions/index.html)が使えます.
+カスタムする場合は _layouts/default.html
+の以下の画像のあたりを適切に編集してください.
+例えば
+```
+$$
+  \begin{align*}
+    \qty(\frac{1}{2})
+  \end{align*}
+$$
+```
+とすると, 期待通りに
+
+$$
+  \begin{align*}
+    \qty(\frac{1}{2})
+  \end{align*}
+$$
+
+が出力されます.
 
 ## 注意
 
