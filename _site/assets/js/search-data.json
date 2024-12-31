@@ -43,7 +43,7 @@
   },"6": {
     "doc": "ホーム",
     "title": "newcommand",
-    "content": "newcommandを使って独自の定義が設定できます. $$ \\newcommand{Real}{\\mathbb{R}} \\Real $$ . とすると . \\[\\newcommand{Real}{\\mathbb{R}} \\Real\\] となります. newcommandの範囲は異なるブロックにも及びます. $$ \\newcommand{Int}{\\mathbb{Z}} $$ $$ \\begin{align*} \\Int \\end{align*} $$ . とすると, 期待通り . \\[\\newcommand{Int}{\\mathbb{Z}}\\] \\[\\begin{align*} \\Int \\end{align*}\\] が出力されます. ",
+    "content": "newcommandを使って独自の定義が設定できます. $$ \\newcommand{Real}{\\mathbb{R}} \\Real $$ . とすると . \\[\\newcommand{Real}{\\mathbb{R}} \\Real\\] となります. newcommandの範囲は異なるブロックにも及びます. $$ \\newcommand{Int}{\\mathbb{Z}} $$ $$ \\begin{align*} \\Int \\end{align*} $$ . とすると, 期待通り . \\[\\newcommand{Int}{\\mathbb{Z}}\\] \\[\\begin{align*} \\Int \\end{align*}\\] が出力されます. newcommandをまとめて記述しておく . _includes/header_custom.html に記述しておくと記事のマークダウンファイルから参照することができます. 例えばこのリポジトリでは$\\polylog$というコマンドを用意しています. ",
     "url": "/lecture_template/#newcommand",
     
     "relUrl": "/#newcommand"
